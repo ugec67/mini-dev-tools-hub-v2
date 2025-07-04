@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Dev Tools Hub</title>
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Dev Tools Hub</h1>
+
+        <!-- Timer Section -->
+        <div class="tool-section">
+            <h2>Timer</h2>
+            <div id="timer-controls">
+                <!-- Input fields for minutes and seconds -->
+                <input type="number" id="minutesInput" placeholder="Minutes" min="0">
+                <input type="number" id="secondsInput" placeholder="Seconds" min="0" max="59">
+                <!-- Buttons to control the timer -->
+                <button id="startTimer">Start</button>
+                <button id="pauseTimer">Pause</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+            <!-- Display for the countdown -->
+            <p id="countdown">00:00</p>
+        </div>
+
+        <!-- Currency Converter Section -->
+        <div class="tool-section">
+            <h2>Currency Converter</h2>
+            <div class="currency-inputs">
+                <input type="number" id="amountInput" placeholder="Amount" min="0" value="1">
+                <select id="fromCurrency">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="INR" selected>INR - Indian Rupee</option>
+                </select>
+                <span>to</span>
+                <select id="toCurrency">
+                    <option value="USD" selected>USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                </select>
+            </div>
+            <button id="convertCurrencyBtn">Convert</button>
+            <p id="currencyResult"></p>
+        </div>
+
+        <!-- Age Calculator Section -->
+        <div class="tool-section">
+            <h2>Age Calculator</h2>
+            <label for="birthDateInput">Your Birth Date:</label>
+            <input type="date" id="birthDateInput">
+            <button id="calculateAgeBtn">Calculate Age</button>
+            <p id="ageResult"></p>
+        </div>
+
+        <!-- Password Generator Section -->
+        <div class="tool-section">
+            <h2>Password Generator</h2>
+            <div class="password-options">
+                <!-- Checkboxes for character types -->
+                <label><input type="checkbox" id="includeUppercase" checked> Uppercase</label>
+                <label><input type="checkbox" id="includeLowercase" checked> Lowercase</label>
+                <label><input type="checkbox" id="includeNumbers" checked> Numbers</label>
+                <label><input type="checkbox" id="includeSymbols"> Symbols</label>
+                <!-- Input for password length -->
+                <label>Length: <input type="number" id="passwordLength" value="12" min="4" max="64"></label>
+            </div>
+            <!-- Button to generate the password -->
+            <button id="generatePassword">Generate Password</button>
+            <div class="password-output">
+                <!-- Display for the generated password (readonly) -->
+                <input type="text" id="generatedPassword" readonly>
+                <!-- Button to copy the password to clipboard -->
+                <button id="copyPassword">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
